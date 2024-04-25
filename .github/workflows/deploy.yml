@@ -60,7 +60,7 @@ jobs:
         if: ${{ github.event.inputs.version == '' || github.event.inputs.version == 'latest' }}
         env:
           CR_REGISTRY: ${{ secrets.CR_REGISTRY }}
-          CR_REPOSITORY: ${{ env.image_repository_name }}
+          CR_REPOSITORY: dockeraction
           IMAGE_TAG: ${{ env.TAG_NAME }}
         run: |
           echo $CR_REGISTRY
