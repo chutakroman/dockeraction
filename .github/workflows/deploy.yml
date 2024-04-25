@@ -59,7 +59,7 @@ jobs:
       - name: Build, tag, and push image to Yandex Cloud Container Registry
         if: ${{ github.event.inputs.version == '' || github.event.inputs.version == 'latest' }}
         env:
-          CR_REGISTRY: ${{ secrets.CR_REGISTRY }}
+          CR_REGISTRY: my-registry
           CR_REPOSITORY: dockeraction
           IMAGE_TAG: ${{ env.TAG_NAME }}
         run: |
