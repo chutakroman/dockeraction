@@ -1,0 +1,17 @@
+
+services:
+  app:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: production
+    command: >
+      sh -c "npm run start"
+    env_file:
+      - ./.env
+    # volumes:
+      # - .:/usr/src/app:delegated
+      #   - /usr/src/app/node_modules
+    ports:
+      - '${PORT}:${PORT}'
