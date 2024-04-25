@@ -23,7 +23,6 @@ on:
 jobs:
   push_to_registry:
     runs-on: ubuntu-22.04
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       # Checkout latest or specific tag
       - name: checkout
